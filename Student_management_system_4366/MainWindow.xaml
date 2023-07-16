@@ -1,0 +1,53 @@
+﻿<Window x:Class="Student_management_system_4366.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Student_management_system_4366"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen"
+        WindowStyle="None" Background="Transparent" AllowsTransparency="True">
+    <Window.Resources>
+        <LinearGradientBrush x:Key="WindowBackgroundBrush" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#0D47A1" Offset="0"/>
+            <GradientStop Color="#1976D2" Offset="1"/>
+            <GradientStop Color="#42A5F5" Offset="0.6"/>
+            <GradientStop Color="#90CAF9" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Resources>
+
+    <Border Background="{StaticResource WindowBackgroundBrush}" CornerRadius="30">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="0" Grid.ColumnSpan="2">
+                <Label Content="Student Management System" FontWeight="Bold" FontSize="50" HorizontalAlignment="Center" 
+               VerticalAlignment="Top"/>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <StackPanel>
+                    <TextBlock Text="Username :" FontSize="30" Margin="10 20 0 0"/>
+                    <TextBox x:Name="Usernametb" Margin="170 -40 30 0" FontSize="20"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="Password  :" FontSize="30" Margin="10 100 0 0"/>
+                    <PasswordBox x:Name="Passwordtb" Margin="170 -40 30 0" FontSize="20" />
+                </StackPanel>
+                <Button Content="Login" Margin="0 150 250 0" Height="40" Width="200" 
+                HorizontalAlignment="Center" Style="{StaticResource buttondeLogin}" Click="Button_Click"/>
+                <Button Content="Close" Height="40" Width="200" Margin="250 150 0 0" 
+                    Style="{StaticResource buttondeLogin}" Click="Button_Click_1"/>
+                <Label Content="Username - Admin and Password - 1234" Margin="10 300 0 0" FontSize="16"/>
+            </Grid>
+            <Image Grid.Row="1" Source="C:/Users/Nifras MJM/Desktop/GUI Individual/Student_management_system_4366/LOGO_OF_RUHUNA-removebg-preview.png" Margin="50 0 50 0" 
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"/>
+        </Grid>
+    </Border>
+</Window>

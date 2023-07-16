@@ -1,0 +1,61 @@
+﻿<Window x:Class="Student_management_system_4366.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Student_management_system_4366"
+        mc:Ignorable="d"
+        Title="Window1" Height="500" Width="800" WindowStartupLocation="CenterScreen"
+        Background="Transparent" WindowStyle="None" AllowsTransparency="True">
+    <Window.DataContext>
+        <local:AddStudentVM/>
+    </Window.DataContext>
+    <Window.Resources>
+        <LinearGradientBrush x:Key="WindowBackgroundBrush" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#9E9E9E" Offset="0"/>
+            <GradientStop Color="#607D8B" Offset="0.5"/>
+            <GradientStop Color="#2196F3" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Resources>
+    <Border Background="{StaticResource WindowBackgroundBrush}" CornerRadius="15">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Border>
+            <StackPanel Height="500" Width="800" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Vertical">
+                <Label Content="Student informations" Style="{StaticResource LabelText}"/>
+                <StackPanel>
+                    <TextBlock Text="First name" FontSize="16" Margin="20 30 0 0"/>
+                    <TextBox Margin="150 -20 50 0" Height="20" Text="{Binding Firstname, UpdateSourceTrigger=PropertyChanged}"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="Last name" FontSize="16" Margin="20 30 0 0"/>
+                    <TextBox Margin="150 -20 50 0" Height="20" Text="{Binding Lastname, UpdateSourceTrigger=PropertyChanged}"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="Age" FontSize="16" Margin="20 30 0 0"/>
+                    <TextBox Margin="150 -20 50 0"  Height="20" Text="{Binding Age, UpdateSourceTrigger=PropertyChanged}"/>
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock Text="Date of birth" FontSize="16" Margin="20 30 0 0"/>
+                    <TextBox Margin="150 -20 50 0" Height="20" Text="{Binding DateofBirth, UpdateSourceTrigger=PropertyChanged}"/>
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock Text="GPA" FontSize="16" Margin="20 30 0 0"/>
+                    <TextBox Margin="150 -20 50 0"  Height="20" Text="{Binding Gpa, UpdateSourceTrigger=PropertyChanged}"/>
+                </StackPanel>
+                <Image Height="40" Width="40" Margin="0 100 0 0" Source="{Binding SelectedImage, UpdateSourceTrigger=PropertyChanged}"/>
+                <Button Content="Insert a Picture" Command="{Binding InsertanimageCommand}" 
+                        Margin="0 -150 0 0" HorizontalAlignment="Center" Style="{StaticResource buttondesave}"/>
+                <Button Content="Save" Command="{Binding saveallCommand}" 
+                        Margin="0 0 400 0" Style="{StaticResource buttondesave}"/>
+                <Button Content="Close" Command="{Binding closeallCommand}" 
+                        Margin="400 -40 0 0" Style="{StaticResource buttondesave}"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+    </Border>
+</Window>

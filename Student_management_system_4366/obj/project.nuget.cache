@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ugp6htQy6ShptgN9IZa4OXBEZyludziGwAFV2CPpquR9gLrMTsHnRb+MQ069VnKpDPaOSaUEtdHCxWxAu5DhrQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Nifras MJM\\Desktop\\GUI Individual\\Student_management_system_4366\\Student_management_system_4366.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Nifras MJM\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.1\\communitytoolkit.mvvm.8.2.1.nupkg.sha512"
+  ],
+  "logs": []
+}
